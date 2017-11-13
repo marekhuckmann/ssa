@@ -1,6 +1,7 @@
 @charset "UTF-8";
 @import "variables";
 @import "lib/bootstrap";
+@import "lib/font-awesome";
 @import "swipebox";
 
 @media only screen and (max-width: 991px) {
@@ -144,7 +145,6 @@
     z-index: -1;
     background-color: $yellow;
 
-
     @media #{$sm} {
       width: 100%;
     }
@@ -215,6 +215,10 @@
 
 body {
   background: url("../img/tlo.png") center top no-repeat;
+  background-size: cover;
+  @media #{$md} {
+    background-size: auto;
+  }
 }
 
 p {
@@ -225,7 +229,9 @@ p {
 
 #bg2 {
   padding-bottom: 150px;
-  background: url("../img/tlo2.png") left bottom no-repeat;
+  @media #{$md} {
+    background: url("../img/tlo2.png") left bottom no-repeat;
+  }
   @media #{$xs} {
     padding-bottom: 0;
   }
@@ -356,25 +362,6 @@ h1 {
   //margin-top: 150px;
 }
 
-//nav > div {
-//  & > ul {
-//    & > li {
-//     & > ul {
-//       display: none;
-//     }
-//      position: relative;
-//      &:hover {
-//        position: absolute;
-//        left: 0;
-//        top: 100%;
-//        ul {
-//          display: block;
-//        }
-//      }
-//    }
-//  }
-//}
-
 #names {
   display: inline-flex;
   font-family: 'Pacifico', cursive;
@@ -468,26 +455,34 @@ a:hover {
 }
 
 nav ul {
-  padding: 6px 0;
-  border-top: 1px solid $grey;
-  border-bottom: 1px solid $grey;
-  font-size: 15px;
-}
-
-#bottom-ul {
-
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-
-  li a {
-    color: black;
-    &:hover {
-      color: $grey;
-    }
+  @media #{$md} {
+    padding: 6px 0;
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+    font-size: 15px;
+    width: 100%;
   }
 }
 
+
+li a {
+  display: block;
+}
+
 nav li {
+  @media only screen and (max-width: 767px) {
+    border-bottom: 1px solid $grey;
+    border-top: 1px solid transparent;
+
+    &:first-child {
+      border-color: $grey;
+    }
+    a {
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+  }
+
   margin: 0 15px;
   list-style: none;
   display: inline;
@@ -496,13 +491,28 @@ nav li {
     text-decoration: none;
     font-weight: 500;
     color: $grey;
-    padding: 4px;
+    width: 100%;
     display: inline-block;
+    @media #{$md} {
+      padding: 5px;
+    }
     &:hover {
       color: black;
     }
   }
 }
+
+#bottom-ul {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  li a {
+    color: black;
+    &:hover {
+      color: $grey;
+    }
+  }
+}
+
 
 .center {
   display: block;
@@ -566,8 +576,11 @@ a {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
-  padding: 40px 0;
+  padding: 20px 0 0;
   align-items: center;
+  @media #{$md} {
+    padding: 40px 0;
+  }
 }
 
 .ssa-footer {
@@ -897,14 +910,16 @@ iframe {
 }
 
 #main-gallery {
-  :nth-child(3n+3):not(p) {
-    top: 50px;
-  }
+  @media #{$lg} {
+    :nth-child(3n+3):not(p) {
+      top: 50px;
+    }
 
-  :nth-child(3n+2):not(p) {
-    top: 100px;
+    :nth-child(3n+2):not(p) {
+      top: 100px;
+    }
   }
-  padding-bottom: 100px;
+  padding: 0 15px 100px;
 }
 
 .back-btn {
@@ -912,4 +927,30 @@ iframe {
   font-size: 30px;
   border: none;
   margin-top: 10px;
+}
+
+.navbar {
+  width: 100%;
+  padding: 0;
+  @media #{$md} {
+    margin-bottom: 25px;
+  }
+}
+
+.navbar-nav {
+  justify-content: center;
+}
+
+.navbar-toggler {
+  align-self: flex-end;
+}
+
+.fa-bars {
+  color: $grey;
+}
+
+.logo-mobile {
+  @media #{$xs} {
+    text-align: center;
+  }
 }

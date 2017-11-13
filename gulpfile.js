@@ -14,7 +14,7 @@ browserSync = require("browser-sync"),
 
 //js
 gulp.task('js', function(){
-    gulp.src(['./dev/js/lib/*.js', './dev/js/jquery.dlmenu.js', './dev/js/jquery.swipebox.min.js', './dev/js/script.js' ])
+    gulp.src(['./dev/js/lib/*.js', './dev/js/jquery.dlmenu.js', './dev/js/jquery.swipebox.min.js', './dev/js/script.js', './dev/js/bootstrap.bundle.js' ])
         .pipe(concat('script.js'))
         .pipe(gulp.dest('./js'))
         .pipe(uglify())
