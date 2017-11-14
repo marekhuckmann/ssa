@@ -71,6 +71,13 @@
   }
 }
 
+h1,
+h3, h4 {
+  font-family: 'Ubuntu', sans-serif;
+  position: relative;
+  z-index: 2;
+}
+
 #ampersand {
   font-size: 60px;
   color: $green;
@@ -213,6 +220,34 @@
   }
 }
 
+.materials {
+  position: relative;
+  z-index: -1;
+  padding: 20px;
+  width: 400px;
+  color: white;
+  margin: 20% auto 31%;
+  h4 {
+    color: white;
+  }
+  &::before {
+    content: "";
+    top: 50%;
+    left: 0;
+    transform: skew(0, -27.694deg) translateY(-50%);
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 135%;
+    z-index: -1;
+    background-color: $green;
+  }
+}
+
+materials materials-content {
+  display: block;
+}
+
 body {
   background: url("../img/tlo.png") center top no-repeat;
   background-size: cover;
@@ -235,13 +270,6 @@ p {
   @media #{$xs} {
     padding-bottom: 0;
   }
-}
-
-h1,
-h3 {
-  font-family: 'Ubuntu', sans-serif;
-  position: relative;
-  z-index: 2;
 }
 
 .more {
@@ -301,6 +329,10 @@ h1 {
   font-weight: bolder;
 }
 
+h4 {
+  color: $green;
+}
+
 .subpage-header-title {
   margin-bottom: 48px;
 }
@@ -340,6 +372,7 @@ h1 {
   }
   .img-fluid {
     max-width: 100%;
+
     @media #{$md} {
       max-width: none;
     }
@@ -347,6 +380,10 @@ h1 {
       max-width: 100%;
     }
   }
+}
+
+.img-fluid {
+  width: 100%;
 }
 
 .student-zone a:hover {
@@ -464,7 +501,6 @@ nav ul {
   }
 }
 
-
 li a {
   display: block;
 }
@@ -512,7 +548,6 @@ nav li {
     }
   }
 }
-
 
 .center {
   display: block;
@@ -954,3 +989,19 @@ iframe {
     text-align: center;
   }
 }
+
+// Kursy
+#courses li {
+  display: inline-flex;
+  list-style-type: none;
+  &:not(.active) {
+    filter: grayscale(1);
+    transition: filter 1s $gentleAnimation;
+
+    &:hover {
+      filter: grayscale(0);
+      transition: filter 1s $gentleAnimation;
+    }
+  }
+}
+
