@@ -275,7 +275,7 @@ h3, h4 {
   }
 
   @media #{$xl} {
-    margin-bottom: 33%;
+    margin-bottom: 35%;
   }
 
   @media only screen and (max-width: 400px) {
@@ -283,7 +283,7 @@ h3, h4 {
   }
 }
 
-materials materials-content {
+.materials .materials-content {
   display: block;
 }
 
@@ -867,6 +867,7 @@ th {
 
 h2 {
   color: $green;
+  font-weight: bold;
 }
 
 //Contact
@@ -1086,6 +1087,12 @@ iframe {
 
 .green-color {
   color: $green;
+  font-weight: bold;
+}
+
+.red-color {
+  color: $red;
+  font-weight: bold;
 }
 
 .green-tooltip + .tooltip > .tooltip-inner {

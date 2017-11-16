@@ -5568,7 +5568,7 @@ button.close {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -5652,7 +5652,7 @@ button.close {
   padding: 3px 8px;
   color: #fff;
   text-align: center;
-  background-color: #000;
+  background-color: #008b89;
   border-radius: 0.25rem;
 }
 
