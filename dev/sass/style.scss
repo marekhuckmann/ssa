@@ -238,6 +238,8 @@ h3, h4 {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 10%;
+  padding-top: 55px;
+  padding-bottom: 25px;
   @media #{$xs} {
     background-color: $green;
   }
@@ -544,10 +546,6 @@ nav ul {
   }
 }
 
-li a {
-  display: block;
-}
-
 nav li {
   @media only screen and (max-width: 767px) {
     border-bottom: 1px solid $grey;
@@ -571,7 +569,7 @@ nav li {
     font-weight: 500;
     color: $grey;
     width: 100%;
-    display: inline-block;
+    display: block;
     @media #{$md} {
       padding: 5px;
     }
@@ -739,6 +737,8 @@ a {
   padding: 0;
 }
 
+
+
 .gallery .images {
   display: flex;
   flex-wrap: wrap;
@@ -789,6 +789,12 @@ a {
   }
 }
 
+.col-12 .gallery .images .img {
+  @media #{$sm} {
+    width: 33.33%;
+  }
+}
+
 .studio-gallery .gallery .images .img {
   @media #{$sm} {
     width: 25%;
@@ -809,7 +815,7 @@ a {
 .studio {
   display: inline-block;
   float: right;
-  margin-left: 5px;
+  margin-left: 10px;
 }
 
 // Prices
@@ -839,7 +845,7 @@ td {
   justify-content: center;
 }
 
-table {
+table  {
   width: 100%;
   font-size: 14px;
   border-collapse: inherit;
@@ -860,15 +866,33 @@ th {
   line-height: 1em;
 }
 
-.price-icon {
-  float: left;
-  margin-right: 10px;
+// Strefa ucznia - tabele
+.logged-in {
+  td {
+    background-color: transparent;
+    text-align: left;
+  }
+  table {
+    border: 1px dashed $grey;
+  }
+
+}
+.prices h2 {
+  font-size: 16px;
+  font-weight: bold;
+  display: inline;
+  img {
+    margin-right: 10px;
+  }
 }
 
-h2 {
-  color: $green;
-  font-weight: bold;
-}
+//.test {
+//  background: url("../uploads/images/icons/kostka.png") left no-repeat;
+//  padding-left: 60px;
+//  height: 48px;
+//  display: inline-block;
+//  line-height: 48px;
+//}
 
 //Contact
 
@@ -1062,6 +1086,28 @@ iframe {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+// Warsztaty
+.workshop-gallery {
+  flex-basis: 100%;
+  @media #{$sm} {
+    flex-basis: 50%;
+  }
+  div {
+    margin: 0 auto;
+    background-size: cover;
+    background-position: center center;
+    width: 90%;
+    height: 200px;
+    display: block;
+  }
+}
+//Kurs historii sztuki
+
+.history-course {
+  float: right;
+  margin-left: 10px;
 }
 
 .telephone {
