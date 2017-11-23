@@ -412,7 +412,7 @@ h4 {
   filter: brightness(100%);
   transition: filter 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
   &:hover {
-    transition: filter .5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    transition: all .5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
     filter: brightness(120%);
   }
   .img-fluid {
@@ -1147,4 +1147,26 @@ iframe {
 
 .green-tooltip + .tooltip > .tooltip-arrow {
   border-bottom-color: $green;
+}
+
+.child-img {
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all 1s;
+  -moz-transition: all 1s;
+  -o-transition: all 1s;
+  transition: all 1s;
+}
+
+.parent-img:hover .child-img, .parent-img:focus .child-img {
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.parent-img:hover .child-img:before,
+.parent-img:focus .child-img:before {
+  display: block;
 }
