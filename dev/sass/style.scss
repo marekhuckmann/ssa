@@ -166,6 +166,7 @@ h3, h4 {
   position: relative;
   z-index: 0;
   color: black;
+  margin-top: 60px;
 
   &::before {
     content: "";
@@ -262,7 +263,7 @@ h3, h4 {
     }
   }
 
-  width: 400px;
+  width: 421px;
 
   @media #{$sm} {
     margin-bottom: 36%;
@@ -536,6 +537,11 @@ a:hover {
   transition: color .5s $gentleAnimation;
 }
 
+a:focus {
+  color: $dark-green;
+  text-decoration: none;
+}
+
 nav ul {
   @media #{$md} {
     padding: 6px 0;
@@ -573,7 +579,7 @@ nav li {
     @media #{$md} {
       padding: 5px;
     }
-    &:hover {
+    &:hover, &:focus {
       color: black;
     }
   }
@@ -582,9 +588,10 @@ nav li {
 #bottom-ul {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
+  margin-top: 20px;
   li a {
     color: black;
-    &:hover {
+    &:hover, &:focus {
       color: $grey;
     }
   }
@@ -829,7 +836,7 @@ a {
   }
 }
 
-td {
+.prices td {
   &:nth-child(even) {
     background-color: $light-grey
   }
@@ -845,10 +852,11 @@ td {
   justify-content: center;
 }
 
-table  {
+.prices table  {
   width: 100%;
   font-size: 14px;
   border-collapse: inherit;
+  margin-top: 10px;
 }
 
 th {
@@ -867,16 +875,16 @@ th {
 }
 
 // Strefa ucznia - tabele
-.logged-in {
-  td {
-    background-color: transparent;
-    text-align: left;
-  }
-  table {
-    border: 1px dashed $grey;
-  }
-
-}
+//.logged-in {
+//  td {
+//    background-color: transparent;
+//    text-align: left;
+//  }
+//  table {
+//    border: 1px dashed $grey;
+//  }
+//
+//}
 .prices h2 {
   font-size: 16px;
   font-weight: bold;
@@ -1133,12 +1141,21 @@ iframe {
 
 .green-color {
   color: $green;
-  font-weight: bold;
 }
 
 .red-color {
   color: $red;
   font-weight: bold;
+}
+
+.black-color {
+  color: black;
+  a {
+    color: black;
+    &:hover, &:focus {
+      color: $grey;
+    }
+  }
 }
 
 .green-tooltip + .tooltip > .tooltip-inner {
@@ -1169,4 +1186,26 @@ iframe {
 .parent-img:hover .child-img:before,
 .parent-img:focus .child-img:before {
   display: block;
+}
+
+.workshop {
+  width: 90%;
+}
+
+// Strefa ucznia
+
+#logout {
+  float: right;
+  margin-top: -3em;
+  position: relative;
+  z-index: 4;
+  font-family: 'Pacifico', cursive;
+}
+
+table {
+  width: 100%;
+}
+
+.strefa-ucznia {
+  list-style-type: none;
 }
