@@ -3,7 +3,6 @@
 @import "lib/bootstrap";
 @import "lib/font-awesome";
 @import "swipebox";
-@import "lib/menu";
 
 @media only screen and (max-width: 991px) {
   .subpage-header {
@@ -72,7 +71,8 @@
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h3, h4 {
   font-family: 'Ubuntu', sans-serif;
   position: relative;
   z-index: 2;
@@ -202,7 +202,9 @@ h1, h2, h3, h4, h5, h6 {
   .ssa-img {
     margin-top: 100px;
   }
-
+  .logo-mid {
+    margin-bottom: 0;
+  }
 }
 
 .ssa {
@@ -279,7 +281,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 35%;
   }
 
-  @media only screen and (max-width: 421px) {
+  @media only screen and (max-width: 400px) {
     width: 98%;
   }
 }
@@ -368,7 +370,9 @@ p {
 
 h1 {
   margin-top: 14px;
-  font-weight: bold;
+  color: $green;
+  font-size: 40px;
+  font-weight: bolder;
 }
 
 h4 {
@@ -377,17 +381,10 @@ h4 {
 
 .subpage-header-title {
   margin-bottom: 48px;
-  color: $green;
-}
-
-course-header {
-  color: $green;
 }
 
 .header-title {
   text-transform: uppercase;
-  color: $green;
-  text-align: center;
 }
 
 .zone {
@@ -399,7 +396,6 @@ course-header {
 }
 
 .subpage-title {
-  font-size: 2em;
   margin-top: 15px;
   @media #{$md} {
     margin-top: 25px;
@@ -580,7 +576,6 @@ nav li {
     color: $grey;
     width: 100%;
     display: block;
-    white-space: nowrap;
     @media #{$md} {
       padding: 5px;
     }
@@ -614,6 +609,7 @@ nav li {
   margin-bottom: 20px;
 }
 
+h1,
 nav ul {
   text-align: center;
 }
@@ -671,18 +667,12 @@ a {
 }
 
 .ssa-footer {
-  border-top: 1px solid $grey;
-  padding-top: 10px;
-  @media #{$md} {
-    border: none;
-  }
   text-align: center;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 10px;
-
 }
 
 .subpage-description p {
@@ -753,6 +743,8 @@ a {
   margin-top: 30px;
   padding: 0;
 }
+
+
 
 .gallery .images {
   display: flex;
@@ -844,11 +836,6 @@ a {
   }
 }
 
-
-table, td {
-  border: 1px solid white;
-}
-
 .prices td {
   &:nth-child(even) {
     background-color: $light-grey
@@ -863,15 +850,13 @@ table, td {
   padding: 15px 0;
   text-align: center;
   justify-content: center;
-  border: none;
 }
 
-.prices table {
+.prices table  {
   width: 100%;
   font-size: 14px;
   border-collapse: inherit;
   margin-top: 10px;
-  border: none;
 }
 
 th {
@@ -1077,7 +1062,7 @@ iframe {
 
 .logo-mobile {
   @media #{$xs} {
-    width: 85%
+    text-align: center;
   }
 }
 
@@ -1126,7 +1111,6 @@ iframe {
     display: block;
   }
 }
-
 //Kurs historii sztuki
 
 .history-course {
@@ -1161,6 +1145,7 @@ iframe {
 
 .red-color {
   color: $red;
+  font-weight: bold;
 }
 
 .black-color {
@@ -1203,10 +1188,6 @@ iframe {
   display: block;
 }
 
-.parent-img .child-img img {
-  width: 100%;
-}
-
 .workshop {
   width: 90%;
 }
@@ -1222,32 +1203,9 @@ iframe {
 }
 
 table {
-  width: 75%;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .strefa-ucznia {
   list-style-type: none;
-}
-
-#dl-menu {
-  position: absolute;
-  height: 0;
-  z-index: 9999;
-  top: 0;
-  right: 0;
-  text-align: right;
-}
-
-.dl-trigger {
-  top: 2em;
-  right: 1em;
-  @media only screen and (max-width: 575px) {
-    top: 1.8em;
-    right: 0.5em;
-  }
-}
-
-.dl-menuopen {
-  text-align: center;
 }
